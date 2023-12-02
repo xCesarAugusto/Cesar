@@ -12,7 +12,7 @@ Projeto Criado Com Os Ensinamentos Do Modulo Discover Da RocketSeat
 <br>
 
 <p align="center">
-  <img alt="projeto DevLinks" src="./preview.png" width="100%">
+  <img alt="projeto DevLinks" src="https://github.com/xCesarAugusto/Cehttps://github.com/xCesarAugusto/Cesar/blob/main/Preview.png?raw=true">
 </p>
 
 ## 🚀 Tecnologias
