@@ -1,0 +1,189 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lato:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --text-color:black;
+    --backgroundimg:url(./bg-mobile.jpg);
+    --colorbackgroundlist:rgba(255, 255, 255, 0.1);
+    --colorhover:rgba(255, 255, 255, 0.05);
+    --colorborder:rgba(0, 0, 0, 0.50);
+    --switch-bg-url:url(./moon-stars.svg);
+    --surface-color: rgba(0,0,0,0.05);
+    --text-colorw: white;
+}
+
+
+.content {
+    text-align: center;
+margin: auto;
+    width: 100%;
+    max-width: 588px;
+    max-width: 600px;
+}
+
+
+
+#switch {
+    position: relative;
+    width: 64px;
+    margin:4px auto;
+}
+
+
+
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: white  var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    top:50%;
+    left: 0;
+    z-index: 1;
+    
+    transform: translateY(-50%);
+    animation: slide-back .2s forwards;
+}
+
+#switch button:hover{
+    outline:8px solid var(--colorbackgroundlist)
+}
+
+
+.ligth #switch button {
+ animation: slide-in 0.4s forwards;
+    
+}
+
+
+#switch span {
+    display: block;
+    border-radius: 9999px;
+    width: 62px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--colorborder);
+    backdrop-filter: blur(4px);
+   -webkit-backdrop-filter: blur(4px);
+
+}
+
+
+
+.ligth {
+    --text-color:rgb(0, 0, 0);
+    --backgroundimg:url(./bg-mobile-light.jpg);
+    --colorbackgroundlist:rgba(0, 0, 0, 0.233);
+    --colorhover:rgba(37, 34, 34, 0.596);
+    --colorborder:rgba(0, 0, 0, 0.5);
+    --switch-bg-url:url(./sun.svg);
+    --text-colorw: black;
+    
+
+
+
+
+    
+}
+
+body {
+    font-family: 'Inter', sans-serif,Arial, Helvetica;
+background-image: var(--backgroundimg);
+background-repeat: no-repeat;
+background-size: cover;
+height: 100vh;
+
+}
+
+
+
+
+
+#profileimg {
+    margin-top: 80px;
+    width: 300px;
+    border-radius: 50%;
+    border: 4px solid black;
+}
+
+ul {
+    margin: 30px;
+    list-style: none;
+}
+
+ul li a {
+    border: 1px solid var(--colorborder);
+    font-weight: bold;
+    background-color:var(--colorbackgroundlist);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 5px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all .5s;
+}
+
+ul li a:hover {
+    background-color:var(--colorhover);
+    border: 1.5px  solid white;
+}
+
+h1 {
+margin:10px 0px;
+color: var(--text-color);
+}
+
+footer {
+    color: var(--text-colorw);
+    margin-bottom: 30px;
+}
+
+
+@media (min-width:700px) {
+
+    :root {
+
+        --backgroundimg:url(./bg-desktop.jpg);
+    }
+
+    .ligth {
+
+        --backgroundimg:url(./bg-desktop-light.jpg);
+
+    }
+
+}
+
+@keyframes slide-in {
+    from {
+
+left:0;
+
+    }
+    to {
+
+left:50%
+
+    }
+}
+
+@keyframes slide-back {
+    from {
+        left:50%
+    }
+
+    to {
+        left:0
+    }
+}
