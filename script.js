@@ -6,7 +6,7 @@ const img =document.querySelector("#profileimg")
 
 if(html.classList.contains ('ligth')) {
 
-img.setAttribute('src', './Profile-ligth.png')
+img.setAttribute('src', './Profile-ligth.jpg')
 
 } else {
 
